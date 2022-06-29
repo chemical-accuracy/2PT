@@ -8,7 +8,7 @@ SHELL = /bin/sh
 # libraries are needed for your machine
 
 CC = icpc
-FFTW = /home/tpascal/codes/fftw/3.3
+FFTW = /usr/local/
 CDEBUG= -g -Wall -wd981 -wd2259 -wd1572 -wd383 -DDEBUG=1
 #CDEBUG= -DDEBUG=0
 OPTFLAGS = -O3 -I${FFTW}/include

@@ -8,7 +8,7 @@ SHELL = /bin/sh
 # libraries are needed for your machine
 
 CC = g++
-FFTW = /home/tpascal/codes/fftw/gnu
+FFTW = /usr/local/
 #CDEBUG= -g -Wall -DDEBUG=1
 CDEBUG= -DDEBUG=0
 OPTFLAGS = -O3 -I${FFTW}/include

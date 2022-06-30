@@ -1,2 +1,9 @@
 */bin
 *.o
+*.out
+*.out.*
+log.*
+*.3n
+*.pwr
+*.thermo
+*.vac

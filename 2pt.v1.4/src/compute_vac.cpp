@@ -146,6 +146,10 @@ void ComputeVAC::init(MODEL *model)
 
 	//set some variables
 	vacnsteps=(int)((model->ctl.ana_fframe-model->ctl.ana_iframe+1.0)/(model->ctl.ana_sframe));
+	if (vacnsteps < 1) {
+	cout<<" Error: Initial trajectory frame is " <<model->ctl.ana_iframe << "and the final frame is "<<model->ctl.ana_iframe<<", i.e. no steps were found in the trajectory file"<<endl;
+	exit(0);
+	}
 	vacmaxf=(int)((model->ctl.ana_vac_corlen)*(vacnsteps-1))+1;
 	tot_N=vacnsteps+vacmaxf;
 	nused = tot_N/2;

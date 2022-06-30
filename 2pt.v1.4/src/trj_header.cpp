@@ -278,7 +278,7 @@ int TRJheader::ReadXYZHeader(ifstream *intrj, int iflag)
 	intrj->seekg(0,ios::beg);
 	while(!intrj->eof()) {
 		intrj->getline(null,1024);
-		if(strstr(null,"i =")) totframe++;
+		if(strstr(null,"STEP")) totframe++;
 	}
 	init_header();
 
@@ -290,7 +290,7 @@ int TRJheader::ReadXYZHeader(ifstream *intrj, int iflag)
 	prev = 0;
 	while(!intrj->eof()) {
 		intrj->getline(null,1024);
-		if(strstr(null," i =")) { 
+		if(strstr(null,"STEP")) { 
 			if(!iflag) byte_offset[totframe].xyz = prev;
 			else byte_offset[totframe].coord = prev;
 			totframe++; 
